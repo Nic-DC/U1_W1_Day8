@@ -72,7 +72,7 @@ console.log({ array2 });
 */
 let string = "asdjg p a u09 4kas3-2u ra";
 console.log(
-  "The string without the values is: ",
+  "The string without the vowels is: ",
   string.replace(/[aeiou]/gi, "")
 );
 
