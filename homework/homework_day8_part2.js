@@ -23,7 +23,7 @@ console.log(Math.min(...array));
  Write a piece of code for getting only even numerical values from an array.
 */
 let array1 = [1, 3, 5, 108];
-const evenValuesArray = [];
+let evenValuesArray = [];
 for (let i = 0; i < array1.length; i++) {
   if (array1[i] % 2 === 0) {
     evenValuesArray.push(array1[i]);
