@@ -8,16 +8,45 @@
 const array = [1, 3, 5];
 const reverseArray = array.reverse();
 console.log({ reverseArray });
+console.log({ array }); // so .reverse changes the "array". Did NOT need to create another array
+// another way to solve the exercise:
+const otherArray = [];
+for (let i = array.length - 1; i >= 0; i--) {
+  otherArray.push(array[i]);
+}
+console.log("Remember that 'array' is now reversed:", otherArray);
 
 /* EXTRA 2
  Write a piece of code for getting the maximum numerical value from an array.
 */
 console.log(Math.max(...array));
+// another way to solve the exercise:
+const arrayMax = [1, -23, 3, 125, 0];
+let max = 0;
+for (let i = 1; i < arrayMax.length; i++) {
+  if (arrayMax[i - 1] < arrayMax[i]) {
+    console.log(`array[i] at ${i - 1} is: ${arrayMax[i]}`);
+    max = arrayMax[i];
+    console.log(`max at ${i} is: ${max}`);
+  }
+}
+console.log({ max });
 
 /* EXTRA 3
  Write a piece of code for getting the minimum numerical value from an array.
 */
 console.log(Math.min(...array));
+// another way to solve the exercise:
+const arrayMin = [1, -23, 3, 125, 0, -3434, 90];
+let min = 0;
+for (let i = 1; i < arrayMin.length; i++) {
+  if (arrayMin[i - 1] < arrayMin[i]) {
+    console.log(`array[i] at ${i - 1} is: ${arrayMin[i]}`);
+    min = arrayMin[i - 1];
+    console.log(`min at ${i} is: ${min}`);
+  }
+}
+console.log({ min });
 
 /* EXTRA 4
  Write a piece of code for getting only even numerical values from an array.
@@ -75,7 +104,20 @@ console.log(
   "The string without the vowels is: ",
   string.replace(/[aeiou]/gi, "")
 );
-
+// another solution:
+let editedString = "";
+for (let i = 0; i < string.length; i++) {
+  if (
+    string[i].toLocaleLowerCase() !== "a" &&
+    string[i].toLocaleLowerCase() !== "e" &&
+    string[i].toLocaleLowerCase() !== "i" &&
+    string[i].toLocaleLowerCase() !== "o" &&
+    string[i].toLocaleLowerCase() !== "u"
+  ) {
+    editedString += string[i];
+  }
+}
+console.log({ editedString });
 /* EXTRA 7
  Write a piece of code for increasing all the numerical values in a array by 1.
 */
