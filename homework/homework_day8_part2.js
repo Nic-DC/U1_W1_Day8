@@ -45,19 +45,21 @@ console.log({ evenValuesArray });
 // for (let i = 0; i <= array2.length; i++) {
 //   if (array2[i] % 2 === 0) {
 //     removedEvenValues.push(array2[i]);
-//     array2.splice(i, 1);
+//     array2.slice(i, i + 1);
 //   } else {
 //     console.log(`the odd values will not be removed from the array`);
 //   }
 // }
 // console.log({ removedEvenValues });
 // console.log({ array2 });
+
 let array2 = [1, 2, 3, 5, 108, 264];
 let removedEvenValues = [];
-for (let i = 0; i <= array2.length; i++) {
+for (let i = 0; i < array2.length; i++) {
   if (array2[i] % 2 === 0) {
     removedEvenValues.push(array2[i]);
-    array2.slice(i, i + 1);
+    array2.splice(i, 1);
+    i--; // we have to revert to a previous index in order for splice to work as expected
   } else {
     console.log(`the odd values will not be removed from the array`);
   }

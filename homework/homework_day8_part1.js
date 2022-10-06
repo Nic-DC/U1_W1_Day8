@@ -152,10 +152,14 @@ console.log({ totalCars });
 */
 for (let i = 0; i < carsForSale.length; i++) {
   let carData = carsForSale[i];
-  console.log({ carData });
+  console.log("The brand info: ", carData.brand);
+  console.log("The model info: ", carData.model);
+  console.log("The licensePlate info: ", carData.licensePlate);
 }
 
 for (let i = 0; i < totalCars.length; i++) {
   let carData = totalCars[i];
-  console.log({ carData });
+  console.log("The brand info: ", carData.brand);
+  console.log("The model info: ", carData.model);
+  console.log("The licensePlate info: ", carData.licensePlate);
 }
