@@ -108,3 +108,6 @@ student4.address.street = "Malamu No.3";
 student4.address.city = "Macao";
 console.log({ student3 });
 console.log({ student4 });
+console.log(
+  "This is how we can safely, correctly clone objects and nested objects"
+);
