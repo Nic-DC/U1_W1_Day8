@@ -40,12 +40,24 @@ console.log({ evenValuesArray });
 /* EXTRA 5
  Write a piece of code for deleting only even entries from an array.
 */
+// let array2 = [1, 2, 3, 5, 108, 264];
+// let removedEvenValues = [];
+// for (let i = 0; i <= array2.length; i++) {
+//   if (array2[i] % 2 === 0) {
+//     removedEvenValues.push(array2[i]);
+//     array2.splice(i, 1);
+//   } else {
+//     console.log(`the odd values will not be removed from the array`);
+//   }
+// }
+// console.log({ removedEvenValues });
+// console.log({ array2 });
 let array2 = [1, 2, 3, 5, 108, 264];
 let removedEvenValues = [];
 for (let i = 0; i <= array2.length; i++) {
   if (array2[i] % 2 === 0) {
     removedEvenValues.push(array2[i]);
-    array2.splice(i, 1);
+    array2.slice(i, i + 1);
   } else {
     console.log(`the odd values will not be removed from the array`);
   }
